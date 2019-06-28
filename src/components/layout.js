@@ -5,24 +5,24 @@ import GlobalStyle from "../utilities/globalstyle"
 import theme from "../../config/theme"
 
 import Header from "./header"
-import Nav from "./nav"
-
+import Navigation from "./navigation"
+import MobileNav from "./navigation-mobile"
 
 const Layout = ({ children }) => (
     <ThemeProvider theme={theme}>
-    <>
-      <GlobalStyle />
-      <Header />
-      <Nav />
-      <Header />
-      <main>{children}</main>
-    </>
+        <>
+            <GlobalStyle />
+            <Header />
+            <Navigation />
+            <Header />
+            <main>{children}</main>
+            <MobileNav />
+        </>
     </ThemeProvider>
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
 }
 
 export default Layout
-

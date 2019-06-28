@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = ({ data }) => {
+const ProjectsPage = ({ data }) => {
     console.log(data)
     return (
         <Layout>
@@ -28,7 +28,7 @@ const SecondPage = ({ data }) => {
     )
 }
 
-export default SecondPage
+export default ProjectsPage
 
 export const query = graphql`
     query {
