@@ -5,10 +5,10 @@ import SEO from "../components/seo"
 import Hero from "../components/hero"
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Hero />
-  </Layout>
+    <Layout>
+        <SEO title="Home" />
+        <Hero />
+    </Layout>
 )
 
 export default IndexPage

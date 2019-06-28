@@ -1,16 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const SecondPage = ({ data }) => {
+    console.log(data)
+    return (
+        <Layout>
+            <SEO title="Home" />
+            <h1>Home</h1>
+            <div>
+                <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                    <div key={node.id}>
+                        <Link to={node.fields.slug}>
+                            <h3>
+                                {node.frontmatter.title}{" "}
+                                <span> — {node.frontmatter.date}</span>
+                            </h3>
+                            <p>{node.excerpt}</p>
+                        </Link>
+                    </div>
+                ))}
+            </div>
+        </Layout>
+    )
+}
 
 export default SecondPage
+
+export const query = graphql`
+    query {
+        allMarkdownRemark(
+            sort: { fields: [frontmatter___position], order: ASC }
+        ) {
+            totalCount
+            edges {
+                node {
+                    id
+                    frontmatter {
+                        title
+                        date(formatString: "DD MMMM, YYYY")
+                    }
+                    fields {
+                        slug
+                    }
+                    excerpt
+                }
+            }
+        }
+    }
+`
