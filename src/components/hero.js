@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import { Flex, Box } from "@rebass/grid"
+import { Flex, Box } from "reflexbox/styled-components"
 import { below } from "../utilities/breakpoints"
 import heroImage from "../images/dev-ing.svg"
 
@@ -12,7 +12,7 @@ const BoxOne = styled(Box)`
 
 const HeroWrapper = styled(Flex)`
     background-color: #3e66a4;
-    background-image: url(${heroImage});
+    /* background-image: url(${heroImage}); */
     background-repeat: no-repeat;
     background-position: 115% 100%;
     background-size: 60% auto;
@@ -21,7 +21,8 @@ const HeroWrapper = styled(Flex)`
     color: #333333;
 
     ${below.med`
-      
+      background-size: 100% auto;
+      background-position: 50% 50%;
     }
   `}
 `
@@ -39,16 +40,27 @@ const SubHeading = styled.h2`
     font-size: 36px;
 `
 
+const HeroImage = styled.img`
+    height: auto;
+    width: 50%;
+`
+
 const Hero = () => (
-    <HeroWrapper>
-        <BoxOne width={[1, 1 / 2]}>
+    <HeroWrapper flexWrap="wrap">
+        <BoxOne width={["100%", "50%"]}>
             <MainHeading>ADAM GARLING</MainHeading>
             <SubHeading>WEB DEVELOPER</SubHeading>
             <p>
-                I am based in San Diego, California. I am passionate about
-                Full-Stack Development, surfing & doing good.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore.
             </p>
         </BoxOne>
+        <Box alignItems="flex-end" width={["100%", "50%"]}>
+            <HeroImage src={heroImage} alt="developer" />
+        </Box>
     </HeroWrapper>
 )
 
