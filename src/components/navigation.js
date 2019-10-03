@@ -43,7 +43,7 @@ const Navigation = () => (
                 <Link to="/">Home</Link>
             </NavLink>
             <NavLink className="innerLink">
-                <Link to="/projects/">Page 2</Link>
+                <Link to="/projects/">Projects</Link>
             </NavLink>
             <NavLink className="innerLink">
                 <Link to="/contact/">Contact</Link>

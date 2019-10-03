@@ -9,9 +9,9 @@ const ProjectsPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Home" />
-            <h1>Home</h1>
+            <h1>Projects</h1>
             <div>
-                <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+                
                 {data.allMarkdownRemark.edges.map(({ node }) => (
                     <div key={node.id}>
                         <Link to={node.fields.slug}>
