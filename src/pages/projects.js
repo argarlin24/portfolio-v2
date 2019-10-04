@@ -1,29 +1,39 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components"
 
+import { Flex, Box } from "reflexbox/styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const StyledFlex = styled(Flex)`
+    background: #3e66a4;
+    height: 100vh;
+`
+
+const ProjLink = styled(Link)`
+    text-decoration: none;
+    color: #000;
+`
 
 const ProjectsPage = ({ data }) => {
     console.log(data)
     return (
         <Layout>
             <SEO title="Home" />
-            <h1>Projects</h1>
-            <div>
-                
-                {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <div key={node.id}>
-                        <Link to={node.fields.slug}>
-                            <h3>
-                                {node.frontmatter.title}{" "}
-                                <span> — {node.frontmatter.date}</span>
-                            </h3>
-                            <p>{node.excerpt}</p>
-                        </Link>
-                    </div>
-                ))}
-            </div>
+            <StyledFlex flexWrap="wrap">
+                <h1>Projects</h1>
+                <Box>
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                        <div key={node.id}>
+                            <ProjLink to={node.fields.slug}>
+                                <h3>{node.frontmatter.title} </h3>
+                                <p>{node.excerpt}</p>
+                            </ProjLink>
+                        </div>
+                    ))}
+                </Box>
+            </StyledFlex>
         </Layout>
     )
 }

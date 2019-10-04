@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const NavWrapper = styled.div`
+    background-color: #3e66a4;
     display: flex;
     font-family: sans-serif;
     padding: 15px 30px;
@@ -31,13 +32,6 @@ const NavLink = styled.div`
 
 const Navigation = () => (
     <NavWrapper>
-        <NavLink href="#">
-            <Link to="/">
-                Brand
-                <br />
-                Logo
-            </Link>
-        </NavLink>
         <NavItems>
             <NavLink className="innerLink">
                 <Link to="/">Home</Link>

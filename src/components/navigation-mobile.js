@@ -7,12 +7,14 @@ import ProjIcon from "../images/file-code-solid.svg"
 import MailIcon from "../images/envelope-solid.svg"
 
 const MobileWrapper = styled.div`
+    background-color: #3e66a4;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
     z-index: 1030;
     display: flex;
+    height: 75px;
     font-family: sans-serif;
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     align-content: center;
