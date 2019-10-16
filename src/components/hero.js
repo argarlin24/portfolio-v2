@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 import { Flex, Box } from "reflexbox/styled-components"
 import { below } from "../utilities/breakpoints"
-import heroImage from "../images/dev-ing.svg"
+// import heroImage from "../images/dev-ing.svg"
 
 const HeroWrapper = styled(Flex)`
     background-color: #3e66a4;
@@ -44,10 +44,10 @@ const SubHeading = styled.h2`
     line-height: 1;
 `
 
-const HeroImage = styled.img`
-    height: auto;
-    width: 100%;
-`
+// const HeroImage = styled.img`
+//     height: auto;
+//     width: 100%;
+// `
 
 const Hero = () => (
     <HeroWrapper flexWrap="wrap">
