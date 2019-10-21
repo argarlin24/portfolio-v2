@@ -7,7 +7,7 @@ import ProjIcon from "../images/file-code-solid.svg"
 import MailIcon from "../images/envelope-solid.svg"
 
 const MobileWrapper = styled.div`
-    background-color: #3e66a4;
+    background: ${props => props.theme.brand.primary};
     position: fixed;
     bottom: 0;
     right: 0;
@@ -34,7 +34,7 @@ const MobileLink = styled.div`
     & a {
         display: block;
         text-decoration: none;
-        color: #000;
+        color: ${props => props.theme.colors.black};
     }
     & span {
         display: block;
@@ -48,9 +48,10 @@ const Icons = styled.img`
     height: 35px;
     margin: 0 auto;
     display: block;
+    color: ${props => props.theme.colors.black};
 `
 
-const MobileNav = () => (
+const MobileNav = props => (
     <MobileWrapper>
         <MobileItems>
             <MobileLink className="innerLink">

@@ -9,13 +9,12 @@ module.exports = {
     siteLanguage: "en", // Language Tag on <html> element
     siteLogo: "/logo.png", // Used for SEO and manifest
     siteDescription:
-      "Minimalistic bright portfolio with full-width grid and large images",
+        "Minimalistic bright portfolio with full-width grid and large images",
     author: "LekoArts", // Author for schema.org JSONLD
-  
+
     googleAnalyticsID: "UA-47519312-3",
-  
+
     // Manifest and Progress color
     themeColor: "#3498DB",
     backgroundColor: "#2b2e3c",
-  }
-  
+}

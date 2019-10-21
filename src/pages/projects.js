@@ -13,7 +13,7 @@ const StyledFlex = styled(Flex)`
 
 const ProjLink = styled(Link)`
     text-decoration: none;
-    color: #000;
+    color: #333333;
 `
 
 const ProjectsPage = ({ data }) => {
@@ -21,9 +21,11 @@ const ProjectsPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Home" />
-            <StyledFlex flexWrap="wrap">
-                <h1>Projects</h1>
-                <Box>
+            <StyledFlex flexDirection="column" alignItems="center">
+                <Box width={"75%"}>
+                    <h1>Projects</h1>
+                </Box>
+                <Box width={"75%"}>
                     {data.allMarkdownRemark.edges.map(({ node }) => (
                         <div key={node.id}>
                             <ProjLink to={node.fields.slug}>

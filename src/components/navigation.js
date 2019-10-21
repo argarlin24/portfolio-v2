@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 const NavWrapper = styled.div`
-    background-color: #3e66a4;
+    background-color: ${props => props.theme.brand.primary};
     display: flex;
     font-family: sans-serif;
     padding: 15px 30px;
@@ -26,20 +26,22 @@ const NavLink = styled.div`
     & a {
         display: block;
         text-decoration: none;
-        color: #000;
+        color: ${props => props.theme.colors.black};
+        cursor: pointer;
+        font-weight: 700;
     }
 `
 
 const Navigation = () => (
     <NavWrapper>
         <NavItems>
-            <NavLink className="innerLink">
+            <NavLink>
                 <Link to="/">Home</Link>
             </NavLink>
-            <NavLink className="innerLink">
+            <NavLink>
                 <Link to="/projects/">Projects</Link>
             </NavLink>
-            <NavLink className="innerLink">
+            <NavLink>
                 <Link to="/contact/">Contact</Link>
             </NavLink>
         </NavItems>

@@ -6,9 +6,9 @@ import { below } from "../utilities/breakpoints"
 // import heroImage from "../images/dev-ing.svg"
 
 const HeroWrapper = styled(Flex)`
-    background-color: #3e66a4;
+    background: ${props => props.theme.brand.primary};
     width: 100%;
-    color: #333333;
+    color: ${props => props.theme.colors.black};
     height: 100vh;
 
     ${below.med`
