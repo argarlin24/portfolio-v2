@@ -7,7 +7,7 @@ import ProjIcon from "../images/file-code-solid.svg"
 import MailIcon from "../images/envelope-solid.svg"
 
 const MobileWrapper = styled.div`
-    background: ${props => props.theme.brand.primary};
+    background: ${props => props.theme.colors.primary};
     position: fixed;
     bottom: 0;
     right: 0;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const NavWrapper = styled.div`
-    background-color: ${props => props.theme.brand.primary};
+    background-color: ${props => props.theme.colors.primary};
     display: flex;
     font-family: sans-serif;
     padding: 15px 30px;

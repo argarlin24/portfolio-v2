@@ -8,10 +8,10 @@ The following websites are WordPress websites that I have built in the past. All
 
 Other tools used building these websites include: SASS, jQuery.
 
-[Connor Reporting](https://connorreporting.com/)
+<a href="https://connorreporting.com/" target="_blank">Connor Reporting</a>
 
-[Godby Heating, Plumbing, and Electrical](https://godbyhpe.com/)
+<a href="https://godbyhpe.com/" target="_blank">Godby Heating, Plumbing, and Electrical</a>
 
-[FNEX Capital](http://fnexcapital.com/)
+<a href="http://fnexcapital.com/" target="_blank">FNEX Capital</a>
 
-[Mainstay MFG](https://mainstaymfg.com/)
+<a href="https://mainstaymfg.com/" target="_blank">Mainstay MFG</a>

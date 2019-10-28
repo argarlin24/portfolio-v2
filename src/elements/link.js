@@ -3,8 +3,7 @@ import { Link } from "gatsby"
 
 export const StyledLink = styled(Link)`
     text-decoration: none;
-    color: #333333;
     font-weight: 700;
-    color: #fb9043;
+    color: ${props => props.theme.colors.secondary};
     cursor: pointer;
 `

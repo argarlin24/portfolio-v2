@@ -1,4 +1,3 @@
-//update with current website data...
 module.exports = {
     pathPrefix: "/", // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
     siteTitle: "Adam Garling", // Navigation and Site Title

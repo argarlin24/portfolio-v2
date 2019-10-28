@@ -3,20 +3,20 @@ import styled from "styled-components"
 
 import { Flex, Box } from "reflexbox/styled-components"
 import { below } from "../utilities/breakpoints"
-// import heroImage from "../images/dev-ing.svg"
+import heroImage from "../images/dev-ing.svg"
 
 const HeroWrapper = styled(Flex)`
-    background: ${props => props.theme.brand.primary};
-    width: 100%;
+    background: ${props => props.theme.colors.primary};
     color: ${props => props.theme.colors.black};
-    height: 100vh;
+    min-height: 100%;
+    padding-bottom: 100px;
 
-    ${below.med`
+    /* ${below.med`
       background-size: 100% auto;
       background-position: 50% 50%;
       height: calc(100vh - 75px);
     }
-  `}
+  `} */
 `
 
 const BoxOne = styled(Box)`
@@ -44,13 +44,13 @@ const SubHeading = styled.h2`
     line-height: 1;
 `
 
-// const HeroImage = styled.img`
-//     height: auto;
-//     width: 100%;
-// `
+const HeroImage = styled.img`
+    height: auto;
+    width: 100%;
+`
 
 const Hero = () => (
-    <HeroWrapper flexWrap="wrap">
+    <HeroWrapper flexDirection="column">
         <BoxOne width={["75%", "75%", "50%", "50%"]}>
             <MainHeading>ADAM GARLING</MainHeading>
             <SubHeading>WEB DEVELOPER</SubHeading>
@@ -62,9 +62,9 @@ const Hero = () => (
                 in reprehenderit in voluptate velit esse cillum dolore.
             </p>
         </BoxOne>
-        {/* <Box alignItems="flex-end" width={["100%", "100%", "50%", "50%"]} justifyContent="center">
+        <Box width={["50%", "50%", "75%", "75%"]} alignSelf="flex-end">
             <HeroImage src={heroImage} alt="developer" />
-        </Box> */}
+        </Box>
     </HeroWrapper>
 )
 

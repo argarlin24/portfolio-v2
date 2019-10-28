@@ -1,25 +1,31 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components"
 
 import { Flex, Box } from "reflexbox/styled-components"
+import { StyledLink } from "../elements/link"
 
 const Wrapper = styled(Flex)`
     background: #3e66a4;
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 100px;
 `
 
 export default ({ data }) => {
     const post = data.markdownRemark
     return (
         <Layout>
-            <Wrapper>
-                <Box>
+            <Wrapper
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+            >
+                <Box width={"75%"}>
                     <h1>{post.frontmatter.title}</h1>
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </Box>
-                <Link to="/projects/">Back to Posts</Link>
+                <StyledLink to="/projects/">Back to Posts</StyledLink>
             </Wrapper>
         </Layout>
     )

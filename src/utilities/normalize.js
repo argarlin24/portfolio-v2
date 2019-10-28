@@ -2,6 +2,14 @@
 import styled, { css } from "styled-components"
 
 const normalize = css`
+:root {
+  font-size: 62.5%;
+  body {
+    margin: 0;
+    // Body font size 16px
+    font-size: 1.6rem;
+  }
+
   html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -16,7 +24,7 @@ const normalize = css`
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 4.8em;
     margin: 0.67em 0;
   }
 

@@ -7,13 +7,13 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const StyledFlex = styled(Flex)`
-    background: #3e66a4;
-    height: 100vh;
+    background: ${props => props.theme.colors.primary};
+    min-height: 100vh;
 `
 
 const ProjLink = styled(Link)`
     text-decoration: none;
-    color: #333333;
+    color: ${props => props.theme.colors.black};
 `
 
 const ProjectsPage = ({ data }) => {
@@ -21,7 +21,11 @@ const ProjectsPage = ({ data }) => {
     return (
         <Layout>
             <SEO title="Home" />
-            <StyledFlex flexDirection="column" alignItems="center">
+            <StyledFlex
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+            >
                 <Box width={"75%"}>
                     <h1>Projects</h1>
                 </Box>
