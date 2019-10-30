@@ -57,7 +57,7 @@ const DIV = styled.div`
 const Hero = () => (
     <HeroWrapper flexDirection="column">
         <BoxOne width={["75%", "75%", "50%", "50%"]}>
-            <Fade left>
+            <Fade left cascade>
                 <MainHeading>ADAM GARLING</MainHeading>
                 <SubHeading>WEB DEVELOPER</SubHeading>
             </Fade>

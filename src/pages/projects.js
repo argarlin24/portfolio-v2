@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
+import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -30,14 +31,18 @@ const ProjectsPage = ({ data }) => {
                     <h1>Projects</h1>
                 </Box>
                 <Box width={"75%"}>
-                    {data.allMarkdownRemark.edges.map(({ node }) => (
-                        <div key={node.id}>
-                            <ProjLink to={node.fields.slug}>
-                                <h3>{node.frontmatter.title} </h3>
-                                <p>{node.excerpt}</p>
-                            </ProjLink>
+                    <Fade left>
+                        <div>
+                            {data.allMarkdownRemark.edges.map(({ node }) => (
+                                <div key={node.id}>
+                                    <ProjLink to={node.fields.slug}>
+                                        <h3>{node.frontmatter.title} </h3>
+                                        <p>{node.excerpt}</p>
+                                    </ProjLink>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </Fade>
                 </Box>
             </StyledFlex>
         </Layout>
