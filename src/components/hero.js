@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
+import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
 import { below } from "../utilities/breakpoints"
 import heroImage from "../images/dev-ing.svg"
@@ -48,12 +49,18 @@ const HeroImage = styled.img`
     height: auto;
     width: 100%;
 `
+const DIV = styled.div`
+    height: 1px;
+    width: 1px;
+`
 
 const Hero = () => (
     <HeroWrapper flexDirection="column">
         <BoxOne width={["75%", "75%", "50%", "50%"]}>
-            <MainHeading>ADAM GARLING</MainHeading>
-            <SubHeading>WEB DEVELOPER</SubHeading>
+            <Fade left>
+                <MainHeading>ADAM GARLING</MainHeading>
+                <SubHeading>WEB DEVELOPER</SubHeading>
+            </Fade>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -65,6 +72,7 @@ const Hero = () => (
         <Box width={["50%", "50%", "75%", "75%"]} alignSelf="flex-end">
             <HeroImage src={heroImage} alt="developer" />
         </Box>
+        <DIV />
     </HeroWrapper>
 )
 
