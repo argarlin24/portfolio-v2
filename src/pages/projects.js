@@ -28,10 +28,10 @@ const ProjectsPage = ({ data }) => {
                 justifyContent="center"
             >
                 <Box width={"75%"}>
-                    <h1>Projects</h1>
+                    <h1>PROJECTS</h1>
                 </Box>
                 <Box width={"75%"}>
-                    <Fade left>
+                    <Fade left cascade>
                         <div>
                             {data.allMarkdownRemark.edges.map(({ node }) => (
                                 <div key={node.id}>

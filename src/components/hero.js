@@ -31,7 +31,7 @@ const BoxOne = styled(Box)`
 `
 
 export const MainHeading = styled.h1`
-    font-size: 64px;
+    font-size: 48px;
     line-height: 1;
 
     ${below.med`
@@ -41,7 +41,7 @@ export const MainHeading = styled.h1`
 `
 
 const SubHeading = styled.h2`
-    font-size: 36px;
+    font-size: 24px;
     line-height: 1;
 `
 
@@ -56,10 +56,14 @@ const DIV = styled.div`
 
 const Hero = () => (
     <HeroWrapper flexDirection="column">
-        <BoxOne width={["75%", "75%", "50%", "50%"]}>
+        <BoxOne width={["75%", "75%", "75%", "75%"]}>
             <Fade left cascade>
                 <MainHeading>ADAM GARLING</MainHeading>
-                <SubHeading>WEB DEVELOPER</SubHeading>
+                <SubHeading>
+                    Full Stack
+                    <br />
+                    Web Developer
+                </SubHeading>
             </Fade>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

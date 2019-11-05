@@ -24,7 +24,6 @@ const normalize = css`
   }
 
   h1 {
-    font-size: 4.8em;
     margin: 0.67em 0;
   }
 
