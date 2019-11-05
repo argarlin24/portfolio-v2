@@ -12,7 +12,7 @@ const BlockLabel = styled.label`
 `
 
 const ContactForm = () => (
-    <Flex justifyContent="center">
+    <Flex justifyContent="center" minHeight="50vh">
         <Box>
             <Form
                 name="contact"
