@@ -2,6 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { Box, Flex } from "reflexbox/styled-components"
 
+const StyledFlex = styled(Flex)`
+    background: ${props => props.theme.colors.primary};
+    min-height: 100vh;
+`
+
 const Form = styled.form``
 
 const Hidden = styled.p`
@@ -12,7 +17,7 @@ const BlockLabel = styled.label`
 `
 
 const ContactForm = () => (
-    <Flex justifyContent="center" minHeight="50vh">
+    <StyledFlex justifyContent="center" minHeight="50vh">
         <Box>
             <Form
                 name="contact"
@@ -41,7 +46,7 @@ const ContactForm = () => (
                 <button type="submit">Send</button>
             </Form>
         </Box>
-    </Flex>
+    </StyledFlex>
 )
 
 export default ContactForm
