@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Section } from "react-scroll-section"
 import Hero from "../components/hero"
 import ContactForm from "../components/contactform"
 import Projects from "../components/proj"
@@ -10,9 +11,15 @@ import Projects from "../components/proj"
 const IndexPage = ({ data }) => (
     <Layout>
         <SEO title="Home" />
-        <Hero />
-        <Projects data={data} />
-        <ContactForm />
+        <Section id="home">
+            <Hero />
+        </Section>
+        <Section id="projects">
+            <Projects data={data} />
+        </Section>
+        <Section id="contact">
+            <ContactForm />
+        </Section>
     </Layout>
 )
 

@@ -18,7 +18,6 @@ const ProjLink = styled(Link)`
 `
 
 const ProjectsPage = ({ data }) => {
-    console.log(data)
     return (
         <Layout>
             <SEO title="Home" />

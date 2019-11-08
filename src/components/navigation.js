@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+
+import { SectionLink } from "react-scroll-section"
 
 const NavWrapper = styled.div`
     background-color: ${props => props.theme.colors.primary};
@@ -22,28 +23,43 @@ const NavItems = styled.nav`
 
 const NavLink = styled.div`
     padding-right: 30px;
+    cursor: pointer;
 
-    & a {
+    /* & a {
         display: block;
         text-decoration: none;
         color: ${props => props.theme.colors.black};
         cursor: pointer;
         font-weight: 700;
-    }
+    } */
 `
 
 const Navigation = () => (
     <NavWrapper>
         <NavItems>
-            <NavLink>
-                <Link to="/">Home</Link>
-            </NavLink>
-            <NavLink>
-                <Link to="/projects/">Projects</Link>
-            </NavLink>
-            <NavLink>
-                <Link to="/contact/">Contact</Link>
-            </NavLink>
+            <SectionLink section="home">
+                {({ onClick, isSelected }) => (
+                    <NavLink onClick={onClick} selected={isSelected}>
+                        Home
+                    </NavLink>
+                )}
+            </SectionLink>
+
+            <SectionLink section="projects">
+                {({ onClick, isSelected }) => (
+                    <NavLink onClick={onClick} selected={isSelected}>
+                        Projects
+                    </NavLink>
+                )}
+            </SectionLink>
+
+            <SectionLink section="contact">
+                {({ onClick, isSelected }) => (
+                    <NavLink onClick={onClick} selected={isSelected}>
+                        Contacts
+                    </NavLink>
+                )}
+            </SectionLink>
         </NavItems>
     </NavWrapper>
 )

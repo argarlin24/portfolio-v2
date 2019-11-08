@@ -4,7 +4,8 @@ import { Box, Flex } from "reflexbox/styled-components"
 
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.primary};
-    min-height: 100vh;
+    min-height: 200px;
+    padding: 100px 0;
 `
 
 const Form = styled.form``
@@ -17,34 +18,36 @@ const BlockLabel = styled.label`
 `
 
 const ContactForm = () => (
-    <StyledFlex justifyContent="center" minHeight="50vh">
-        <Box>
-            <Form
-                name="contact"
-                method="POST"
-                netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
-                data-netlify="true"
-            >
-                <Hidden>
-                    <label>
-                        Don’t fill this out if you're human:{" "}
-                        <input name="bot-field" />
-                    </label>
-                </Hidden>
+    <StyledFlex justifyContent="center">
+        <Box width="75%" display="flex" justifyContent="center">
+            <div>
+                <Form
+                    name="contact"
+                    method="POST"
+                    netlify-honeypot="bot-field"
+                    data-netlify-recaptcha="true"
+                    data-netlify="true"
+                >
+                    <Hidden>
+                        <label>
+                            Don’t fill this out if you're human:{" "}
+                            <input name="bot-field" />
+                        </label>
+                    </Hidden>
 
-                <BlockLabel>Your Email:</BlockLabel>
+                    <BlockLabel>Your Email:</BlockLabel>
 
-                <input type="email" name="email" />
+                    <input type="email" name="email" />
 
-                <BlockLabel>Message:</BlockLabel>
+                    <BlockLabel>Message:</BlockLabel>
 
-                <textarea name="message" />
+                    <textarea name="message" rows="10" />
 
-                <div data-netlify-recaptcha="true" />
+                    <div data-netlify-recaptcha="true" />
 
-                <button type="submit">Send</button>
-            </Form>
+                    <button type="submit">Send</button>
+                </Form>
+            </div>
         </Box>
     </StyledFlex>
 )

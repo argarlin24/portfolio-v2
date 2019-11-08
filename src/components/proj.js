@@ -4,15 +4,22 @@ import styled from "styled-components"
 
 import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
+import { Card, Text } from "../elements"
 
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.white};
     min-height: 100vh;
+    padding-bottom: 75px;
 `
 
 const ProjLink = styled(Link)`
     text-decoration: none;
     color: ${props => props.theme.colors.black};
+`
+
+const CardWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
 `
 
 const Projects = ({ data }) => {
@@ -22,21 +29,21 @@ const Projects = ({ data }) => {
             alignItems="center"
             justifyContent="center"
         >
-            <Box width={"75%"}>
+            <Box width={"75%"} display="flex" justifyContent="center">
                 <h1>PROJECTS</h1>
             </Box>
-            <Box width={"75%"}>
+            <Box width={["75%", "75%", "50%", "50%"]}>
                 <Fade left cascade>
-                    <div>
+                    <CardWrapper>
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                            <div key={node.id}>
+                            <Card key={node.id}>
                                 <ProjLink to={node.fields.slug}>
                                     <h3>{node.frontmatter.title} </h3>
-                                    <p>{node.excerpt}</p>
+                                    <Text>{node.excerpt}</Text>
                                 </ProjLink>
-                            </div>
+                            </Card>
                         ))}
-                    </div>
+                    </CardWrapper>
                 </Fade>
             </Box>
         </StyledFlex>

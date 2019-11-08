@@ -1,1 +1,5 @@
-export * from "./elements"
+export * from "./card"
+export * from "./link"
+export * from "./mainheading"
+export * from "./subheading"
+export * from "./text"
