@@ -6,7 +6,7 @@ import HomeIcon from "../images/home-solid.svg"
 import ProjIcon from "../images/file-code-solid.svg"
 import MailIcon from "../images/envelope-solid.svg"
 
-const MobileWrapper = styled.div`
+const Wrapper = styled.div`
     background: ${props => props.theme.colors.primary};
     position: fixed;
     bottom: 0;
@@ -52,7 +52,7 @@ const Icons = styled.img`
 `
 
 const MobileNav = props => (
-    <MobileWrapper>
+    <Wrapper>
         <MobileItems>
             <MobileLink className="innerLink">
                 <Link to="/">
@@ -73,7 +73,7 @@ const MobileNav = props => (
                 </Link>
             </MobileLink>
         </MobileItems>
-    </MobileWrapper>
+    </Wrapper>
 )
 
 export default MobileNav

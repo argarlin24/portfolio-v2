@@ -4,10 +4,14 @@ import styled from "styled-components"
 import { SectionLink } from "react-scroll-section"
 
 const NavWrapper = styled.div`
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1500;
     background-color: ${props => props.theme.colors.primary};
     display: flex;
     font-family: sans-serif;
-    padding: 15px 30px;
+    padding: 30px 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     align-content: center;
 
