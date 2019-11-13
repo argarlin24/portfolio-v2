@@ -34,7 +34,7 @@ const MobileLink = styled.div`
     & a {
         display: block;
         text-decoration: none;
-        color: ${props => props.theme.colors.black};
+        color: ${props => props.theme.colors.white};
     }
     & span {
         display: block;
@@ -48,7 +48,7 @@ const Icons = styled.img`
     height: 35px;
     margin: 0 auto;
     display: block;
-    color: ${props => props.theme.colors.black};
+    color: ${props => props.theme.colors.white};
 `
 
 const MobileNav = props => (
