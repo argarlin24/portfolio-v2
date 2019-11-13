@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
 import { MainHeading, SubHeading, Text } from "../elements"
-import { below } from "../utilities/breakpoints"
+import pwaImg from "../images/pwa.svg"
 
 const HeroWrapper = styled(Flex)`
     background: ${props => props.theme.colors.primary};
@@ -12,28 +12,26 @@ const HeroWrapper = styled(Flex)`
     min-height: 100vh;
 `
 
-const BoxOne = styled(Box)`
-    padding-top: 100px;
-    padding-left: 60px;
-
-    ${below.med`
-     padding 50px 30px; 
-     text-align: left;
-  `}
+const IMG = styled.img`
+    width: 100%;
+    height: auto;
 `
 
 const Hero = () => (
-    <HeroWrapper flexDirection="column">
-        <BoxOne width={"90%"}>
+    <HeroWrapper
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+    >
+        <Box width={"90%"}>
             <Fade left cascade>
                 <MainHeading primary>ADAM GARLING</MainHeading>
                 <SubHeading primary>Full Stack Web Developer</SubHeading>
             </Fade>
-            <Text textAlign={"center"} primary>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Text>
-        </BoxOne>
+        </Box>
+        <Box width={"75%"}>
+            <IMG src={pwaImg} alt="Progressive Web Application" />
+        </Box>
     </HeroWrapper>
 )
 
