@@ -26,10 +26,10 @@ const Hero = () => (
     <HeroWrapper flexDirection="column">
         <BoxOne width={"90%"}>
             <Fade left cascade>
-                <MainHeading>ADAM GARLING</MainHeading>
-                <SubHeading>Full Stack Web Developer</SubHeading>
+                <MainHeading primary>ADAM GARLING</MainHeading>
+                <SubHeading primary>Full Stack Web Developer</SubHeading>
             </Fade>
-            <Text textAlign={"center"}>
+            <Text textAlign={"center"} primary>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>

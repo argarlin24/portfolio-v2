@@ -22,6 +22,7 @@ const NavItems = styled.nav`
 `
 
 const NavLink = styled.div`
+    color: ${props => props.theme.colors.white};
     padding-right: 30px;
     font-weight: 700;
     cursor: pointer;
@@ -41,7 +42,7 @@ const Navigation = () => (
             <SectionLink section="home">
                 {({ onClick, isSelected }) => (
                     <NavLink onClick={onClick} selected={isSelected}>
-                        Home
+                        HOME
                     </NavLink>
                 )}
             </SectionLink>
@@ -49,7 +50,7 @@ const Navigation = () => (
             <SectionLink section="projects">
                 {({ onClick, isSelected }) => (
                     <NavLink onClick={onClick} selected={isSelected}>
-                        Projects
+                        PROJECTS
                     </NavLink>
                 )}
             </SectionLink>
@@ -57,7 +58,7 @@ const Navigation = () => (
             <SectionLink section="contact">
                 {({ onClick, isSelected }) => (
                     <NavLink onClick={onClick} selected={isSelected}>
-                        Contacts
+                        CONTACTS
                     </NavLink>
                 )}
             </SectionLink>

@@ -39,6 +39,7 @@ const Hidden = styled.p`
 const BlockLabel = styled.label`
     display: block;
     font-weight: bold;
+    color: ${props => props.theme.colors.white};
 `
 
 const ContactForm = () => (

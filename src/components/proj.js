@@ -37,7 +37,9 @@ const Projects = ({ data }) => {
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             <Card key={node.id}>
                                 <ProjLink to={node.fields.slug}>
-                                    <h3>{node.frontmatter.title} </h3>
+                                    <h3>
+                                        {node.frontmatter.title.toUpperCase()}
+                                    </h3>
                                     <Text>{node.excerpt}</Text>
                                 </ProjLink>
                             </Card>
