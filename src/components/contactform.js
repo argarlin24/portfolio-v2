@@ -1,14 +1,36 @@
 import React from "react"
 import styled from "styled-components"
 import { Box, Flex } from "reflexbox/styled-components"
+import { PrimaryBtn } from "../elements"
+import { below } from "../utilities/breakpoints"
 
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.primary};
-    min-height: 200px;
-    padding: 100px 0;
+    min-height: 60vh;
+    padding: 120px 0 140px 0;
 `
 const TextArea = styled.textarea`
-    width: 300px;
+    border-radius: 4px;
+    background-color: #fafafa;
+    padding: 4px;
+    margin-bottom: 20px;
+    border-style: none;
+    width: 50vw;
+    ${below.med`
+        width: 75vw;
+  `}
+`
+
+const Input = styled.input`
+    border-radius: 4px;
+    background-color: #fafafa;
+    padding: 4px;
+    margin-bottom: 20px;
+    border-style: none;
+    width: 50vw;
+    ${below.med`
+        width: 75vw;
+  `}
 `
 
 const Hidden = styled.p`
@@ -16,6 +38,7 @@ const Hidden = styled.p`
 `
 const BlockLabel = styled.label`
     display: block;
+    font-weight: bold;
 `
 
 const ContactForm = () => (
@@ -36,17 +59,17 @@ const ContactForm = () => (
                         </label>
                     </Hidden>
 
-                    <BlockLabel>Your Email:</BlockLabel>
+                    <BlockLabel>EMAIL:</BlockLabel>
 
-                    <input type="email" name="email" />
+                    <Input type="email" name="email" />
 
-                    <BlockLabel>Message:</BlockLabel>
+                    <BlockLabel>MESSAGE:</BlockLabel>
 
-                    <TextArea name="message" />
+                    <TextArea name="message" rows="10" />
 
                     <div data-netlify-recaptcha="true" />
 
-                    <button type="submit">Send</button>
+                    <PrimaryBtn type="submit">SUBMIT</PrimaryBtn>
                 </form>
             </div>
         </Box>

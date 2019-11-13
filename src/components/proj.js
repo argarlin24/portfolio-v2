@@ -7,9 +7,8 @@ import { Flex, Box } from "reflexbox/styled-components"
 import { Card, Text } from "../elements"
 
 const StyledFlex = styled(Flex)`
-    background: ${props => props.theme.colors.white};
+    background: ${props => props.theme.colors.lightgray};
     min-height: 100vh;
-    padding-bottom: 75px;
 `
 
 const ProjLink = styled(Link)`

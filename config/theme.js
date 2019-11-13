@@ -3,6 +3,7 @@ const colors = {
     secondary: "#e58e38",
     grey: "#6b6b6b",
     black: "#111111",
+    lightgray: "#fafafa",
     white: "#fff",
 }
 
