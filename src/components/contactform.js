@@ -5,7 +5,7 @@ import { PrimaryBtn } from "../elements"
 import { below } from "../utilities/breakpoints"
 
 const StyledFlex = styled(Flex)`
-    background: ${props => props.theme.colors.primary};
+    background: ${props => props.theme.colors.white};
     min-height: 60vh;
     padding: 120px 0 140px 0;
 `
@@ -15,6 +15,7 @@ const TextArea = styled.textarea`
     padding: 4px;
     margin-bottom: 20px;
     border-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     width: 50vw;
     ${below.med`
         width: 75vw;
@@ -27,6 +28,7 @@ const Input = styled.input`
     padding: 4px;
     margin-bottom: 20px;
     border-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     width: 50vw;
     ${below.med`
         width: 75vw;
@@ -39,7 +41,7 @@ const Hidden = styled.p`
 const BlockLabel = styled.label`
     display: block;
     font-weight: bold;
-    color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.black};
 `
 
 const ContactForm = () => (
