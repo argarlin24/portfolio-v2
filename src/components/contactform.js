@@ -7,8 +7,9 @@ const StyledFlex = styled(Flex)`
     min-height: 200px;
     padding: 100px 0;
 `
-
-const Form = styled.form``
+const TextArea = styled.textarea`
+    width: 300px;
+`
 
 const Hidden = styled.p`
     display: none;
@@ -21,7 +22,7 @@ const ContactForm = () => (
     <StyledFlex justifyContent="center">
         <Box width="75%" display="flex" justifyContent="center">
             <div>
-                <Form
+                <form
                     name="contact"
                     method="POST"
                     netlify-honeypot="bot-field"
@@ -41,12 +42,12 @@ const ContactForm = () => (
 
                     <BlockLabel>Message:</BlockLabel>
 
-                    <textarea name="message" rows="10" />
+                    <TextArea name="message" />
 
                     <div data-netlify-recaptcha="true" />
 
                     <button type="submit">Send</button>
-                </Form>
+                </form>
             </div>
         </Box>
     </StyledFlex>

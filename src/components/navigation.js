@@ -23,6 +23,7 @@ const NavItems = styled.nav`
 
 const NavLink = styled.div`
     padding-right: 30px;
+    font-weight: 700;
     cursor: pointer;
 
     /* & a {
