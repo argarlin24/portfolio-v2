@@ -35,7 +35,7 @@ const Input = styled.input`
   `}
 `
 
-const Hidden = styled.p`
+const Hidden = styled.div`
     display: none;
 `
 const BlockLabel = styled.label`
@@ -62,6 +62,10 @@ const ContactForm = () => (
                     <BlockLabel>MESSAGE:</BlockLabel>
 
                     <TextArea name="message" rows="10" />
+                    <Hidden>
+                        <label>Don’t fill this out if you're human:</label>
+                        <input name="bot-field" />
+                    </Hidden>
 
                     <div data-netlify-recaptcha="true" />
 
