@@ -6,7 +6,7 @@ import { below } from "../utilities/breakpoints"
 
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.white};
-    min-height: 60vh;
+    min-height: 30vh;
     padding: 120px 0 140px 0;
 `
 const TextArea = styled.textarea`
@@ -55,13 +55,6 @@ const ContactForm = () => (
                     data-netlify-recaptcha="true"
                     data-netlify="true"
                 >
-                    <Hidden>
-                        <label>
-                            Don’t fill this out if you're human:{" "}
-                            <input name="bot-field" />
-                        </label>
-                    </Hidden>
-
                     <BlockLabel>EMAIL:</BlockLabel>
 
                     <Input type="email" name="email" />
