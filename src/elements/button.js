@@ -7,6 +7,6 @@ export const PrimaryBtn = styled.button`
     border-style: none;
     font-weight: bold;
     background-color: ${props => props.theme.colors.secondary};
-    color: #fff;
+    color: #fafafa;
     cursor: pointer;
 `

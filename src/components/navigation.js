@@ -26,7 +26,7 @@ const NavItems = styled.nav`
 `
 
 const NavLink = styled.div`
-    color: ${props => props.theme.colors.white};
+    color: ${props => props.theme.colors.lightgray};
     padding-right: 30px;
     font-weight: 700;
     cursor: pointer;

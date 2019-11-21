@@ -18,10 +18,12 @@ const HeroWrapper = styled(Flex)`
     padding: 200px 0;
 
     ${below.med`
+     min-height: 90vh;
        padding: 40px 0;
   `}
     ${below.small`
-         padding-top: 10vh;
+     min-height: 80vh;
+       padding: 40px 0;
   `}
 `
 
@@ -30,16 +32,15 @@ const HeadingBox = styled(Box)`
 `
 
 const Hero = () => (
-    <Box>
+    <Box bg="#fafafa">
         <HeroWrapper alignItems="center" flexDirection="column">
             <HeadingBox width={"75%"} justifyContent={"center"}>
                 <Fade left cascade>
                     <MainHeading textAlign={"center"}>ADAM GARLING</MainHeading>
-                    <SubHeading textAlign={"center"}>
-                        Full Stack Web Developer
-                    </SubHeading>
+                    <SubHeading textAlign={"center"}>Web Developer</SubHeading>
                     <Text textAlign={"center"}>
-                        There will be some little tagline here.
+                        I'm a web developer in San Diego, California with a
+                        passion for exlporation and continual learning.
                     </Text>
                 </Fade>
             </HeadingBox>
