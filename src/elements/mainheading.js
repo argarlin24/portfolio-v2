@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const MainHeading = styled.h1`
-    font-size: 6.4rem;
+    font-size: 4.4rem;
     line-height: 1;
     text-align: ${props => props.textAlign || "left"};
     color: ${props =>

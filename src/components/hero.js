@@ -5,14 +5,20 @@ import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
 import { MainHeading, SubHeading, Text } from "../elements"
 import { below } from "../utilities/breakpoints"
-import pwaImg from "../images/pwa-transparent.svg"
+import DEV from "../images/dev.svg"
+import { PrimaryBtn } from "../elements"
 
 const HeroWrapper = styled(Flex)`
+    background-image: url(${DEV});
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 50%;
     color: ${props => props.theme.colors.black};
     min-height: 100vh;
-    padding: 100px 100px 100px 100px;
+    padding: 200px 0;
+
     ${below.med`
-         background-size: 75%;
+       padding: 40px 0;
   `}
     ${below.small`
          padding-top: 10vh;
@@ -23,43 +29,27 @@ const HeadingBox = styled(Box)`
     border-radius: 10px;
 `
 
-const ImgBox = styled(Box)`
-    background: rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    border-radius: 50%;
-`
-
-const Img = styled.img`
-    height: auto;
-    width: 100%;
-`
-
 const Hero = () => (
     <Box bg="#3e66a4">
-        <HeroWrapper justifyContent="space-evenly">
-            <HeadingBox width={"40%"} padding="75px 0">
+        <HeroWrapper alignItems="center" flexDirection="column">
+            <HeadingBox width={"75%"} justifyContent={"center"}>
                 <Fade left cascade>
-                    <MainHeading primary>ADAM GARLING</MainHeading>
-                    <SubHeading primary>Full Stack Web Developer</SubHeading>
-                    <Text primary>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
+                    <MainHeading primary textAlign={"center"}>
+                        ADAM GARLING
+                    </MainHeading>
+                    <SubHeading primary textAlign={"center"}>
+                        Full Stack Web Developer
+                    </SubHeading>
+                    <Text textAlign={"center"}>
+                        There will be some little tagline here.
                     </Text>
-                    <p>Icon</p>
-                    <p>Icon</p>
                 </Fade>
             </HeadingBox>
+
             <Box />
-            <ImgBox width="40%" alignSelf="flex-end">
-                <Img src={pwaImg} />
-            </ImgBox>
+            <Box>
+                <PrimaryBtn>PROJECTS</PrimaryBtn>
+            </Box>
         </HeroWrapper>
     </Box>
 )
