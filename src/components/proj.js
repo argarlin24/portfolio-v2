@@ -9,8 +9,8 @@ import { Card, Text } from "../elements"
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.lightgray};
     min-height: 75vh;
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
 `
 
 const ProjLink = styled(Link)`

@@ -7,6 +7,7 @@ import { MainHeading, SubHeading, Text } from "../elements"
 import { below } from "../utilities/breakpoints"
 import DEV from "../images/dev.svg"
 import { PrimaryBtn } from "../elements"
+import { SectionLink } from "react-scroll-section"
 
 const HeroWrapper = styled(Flex)`
     background-image: url(${DEV});
@@ -47,7 +48,11 @@ const Hero = () => (
 
             <Box />
             <Box marginTop={"30px"}>
-                <PrimaryBtn>PROJECTS</PrimaryBtn>
+                <SectionLink section="projects">
+                    {({ onClick }) => (
+                        <PrimaryBtn onClick={onClick}>PROJECTS</PrimaryBtn>
+                    )}
+                </SectionLink>
             </Box>
         </HeroWrapper>
     </Box>
