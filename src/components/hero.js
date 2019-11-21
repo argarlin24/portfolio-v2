@@ -30,14 +30,12 @@ const HeadingBox = styled(Box)`
 `
 
 const Hero = () => (
-    <Box bg="#3e66a4">
+    <Box>
         <HeroWrapper alignItems="center" flexDirection="column">
             <HeadingBox width={"75%"} justifyContent={"center"}>
                 <Fade left cascade>
-                    <MainHeading primary textAlign={"center"}>
-                        ADAM GARLING
-                    </MainHeading>
-                    <SubHeading primary textAlign={"center"}>
+                    <MainHeading textAlign={"center"}>ADAM GARLING</MainHeading>
+                    <SubHeading textAlign={"center"}>
                         Full Stack Web Developer
                     </SubHeading>
                     <Text textAlign={"center"}>
@@ -47,7 +45,7 @@ const Hero = () => (
             </HeadingBox>
 
             <Box />
-            <Box>
+            <Box marginTop={"30px"}>
                 <PrimaryBtn>PROJECTS</PrimaryBtn>
             </Box>
         </HeroWrapper>

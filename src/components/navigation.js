@@ -8,8 +8,8 @@ const NavWrapper = styled.div`
     top: 0;
     width: 100%;
     z-index: 1500;
-    /* background-color: ${props => props.theme.colors.primary};
-    display: flex; */
+    background-color: ${props => props.theme.colors.primary};
+    display: flex;
     font-family: sans-serif;
     padding: 30px 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
@@ -62,7 +62,7 @@ const Navigation = () => (
             <SectionLink section="contact">
                 {({ onClick, isSelected }) => (
                     <NavLink onClick={onClick} selected={isSelected}>
-                        CONTACTS
+                        CONTACT
                     </NavLink>
                 )}
             </SectionLink>
