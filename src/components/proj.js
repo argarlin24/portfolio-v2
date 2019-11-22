@@ -7,7 +7,7 @@ import { Flex, Box } from "reflexbox/styled-components"
 import { Card, Text } from "../elements"
 
 const StyledFlex = styled(Flex)`
-    background: ${props => props.theme.colors.lightgray};
+    background: ${props => props.theme.colors.white};
     min-height: 75vh;
     padding-top: 15vh;
     padding-bottom: 15vh;

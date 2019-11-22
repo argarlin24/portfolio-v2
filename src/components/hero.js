@@ -33,7 +33,7 @@ const HeadingBox = styled(Box)`
 `
 
 const Hero = () => (
-    <Box bg="#fafafa">
+    <Box bg="#f8f8f8">
         <HeroWrapper alignItems="center" flexDirection="column">
             <HeadingBox width={"75%"} justifyContent={"center"}>
                 <Fade left cascade>
