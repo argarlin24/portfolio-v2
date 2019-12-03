@@ -37,13 +37,23 @@ const Projects = ({ data }) => {
                 <Fade left cascade>
                     <CardWrapper>
                         {data.allMarkdownRemark.edges.map(({ node }) => (
-                            <Card key={node.id}>
-                                <ProjLink to={node.fields.slug}>
-                                    <h3>
-                                        {node.frontmatter.title.toUpperCase()}
-                                    </h3>
-                                    <Text>{node.excerpt}</Text>
-                                </ProjLink>
+                            <Card key={node.id} flexDirection="column">
+                                <Flex>
+                                    <Box width={"33%"}>Image</Box>
+                                    <Box width={"66%"}>Icons</Box>
+                                </Flex>
+                                <Box>
+                                    <ProjLink to={node.fields.slug}>
+                                        <h3>
+                                            {node.frontmatter.title.toUpperCase()}
+                                        </h3>
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: node.html,
+                                            }}
+                                        />
+                                    </ProjLink>
+                                </Box>
                             </Card>
                         ))}
                     </CardWrapper>
