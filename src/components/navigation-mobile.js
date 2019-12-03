@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { SectionLink } from "react-scroll-section"
 
 import HomeIcon from "../images/home-solid.svg"
 import ProjIcon from "../images/file-code-solid.svg"
@@ -31,11 +32,9 @@ const MobileItems = styled.nav`
 
 const MobileLink = styled.div`
     padding: 15px 30px;
-    & a {
-        display: block;
-        text-decoration: none;
-        color: ${props => props.theme.colors.white};
-    }
+    display: block;
+    text-decoration: none;
+    color: ${props => props.theme.colors.white};
     & span {
         display: block;
         font-size: 12px;
@@ -54,24 +53,30 @@ const Icons = styled.img`
 const MobileNav = props => (
     <Wrapper>
         <MobileItems>
-            <MobileLink className="innerLink">
-                <Link to="/">
-                    <Icons src={HomeIcon} alt="Home" />
-                    <span>HOME</span>
-                </Link>
-            </MobileLink>
-            <MobileLink className="innerLink">
-                <Link to="/projects/">
-                    <Icons src={ProjIcon} alt="Projects" />
-                    <span>PROJECTS</span>
-                </Link>
-            </MobileLink>
-            <MobileLink className="innerLink">
-                <Link to="/contact/">
-                    <Icons src={MailIcon} alt="Contact" />
-                    <span>CONTACT</span>
-                </Link>
-            </MobileLink>
+            <SectionLink section="home">
+                {({ onClick, isSelected }) => (
+                    <MobileLink onClick={onClick} selected={isSelected}>
+                        <Icons src={HomeIcon} alt="Home" />
+                        <span>HOME</span>
+                    </MobileLink>
+                )}
+            </SectionLink>
+            <SectionLink section="projects">
+                {({ onClick, isSelected }) => (
+                    <MobileLink onClick={onClick} selected={isSelected}>
+                        <Icons src={ProjIcon} alt="Projects" />
+                        <span>PROJECTS</span>
+                    </MobileLink>
+                )}
+            </SectionLink>
+            <SectionLink section="contact">
+                {({ onClick, isSelected }) => (
+                    <MobileLink onClick={onClick} selected={isSelected}>
+                        <Icons src={MailIcon} alt="Contact" />
+                        <span>CONTACT</span>
+                    </MobileLink>
+                )}
+            </SectionLink>
         </MobileItems>
     </Wrapper>
 )

@@ -32,14 +32,6 @@ const NavLink = styled.div`
     cursor: pointer;
     border-bottom: 3px solid ${props =>
         props.selected ? props.theme.colors.secondary : "transparent"};
-
-    /* & a {
-        display: block;
-        text-decoration: none;
-        color: ${props => props.theme.colors.black};
-        cursor: pointer;
-        font-weight: 700;
-    } */
 `
 
 const Navigation = () => (
