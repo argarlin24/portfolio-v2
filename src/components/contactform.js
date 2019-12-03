@@ -45,7 +45,10 @@ const BlockLabel = styled.label`
 `
 
 const ContactForm = () => (
-    <StyledFlex justifyContent="center">
+    <StyledFlex flexDirection="column" alignItems="center">
+       <Box width={"75%"} display="flex" justifyContent="center">
+                    <h1>CONTACT</h1>
+                </Box>
         <Box width="75%" display="flex" justifyContent="center">
             <div>
                 <form

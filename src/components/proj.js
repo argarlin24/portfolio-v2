@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
-import { Card, Text } from "../elements"
+import { Card } from "../elements"
 
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.white};
