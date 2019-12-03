@@ -57,19 +57,19 @@ const MobileNav = props => (
             <MobileLink className="innerLink">
                 <Link to="/">
                     <Icons src={HomeIcon} alt="Home" />
-                    <span>Home</span>
+                    <span>HOME</span>
                 </Link>
             </MobileLink>
             <MobileLink className="innerLink">
                 <Link to="/projects/">
                     <Icons src={ProjIcon} alt="Projects" />
-                    <span>Projects</span>
+                    <span>PROJECTS</span>
                 </Link>
             </MobileLink>
             <MobileLink className="innerLink">
                 <Link to="/contact/">
                     <Icons src={MailIcon} alt="Contact" />
-                    <span>Contact</span>
+                    <span>CONTACT</span>
                 </Link>
             </MobileLink>
         </MobileItems>
