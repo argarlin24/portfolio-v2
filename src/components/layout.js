@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyle />
-            <ScrollingProvider>
+            <ScrollingProvider scrollBehavior="smooth">
                 <Header />
                 <Navigation />
                 <Header />

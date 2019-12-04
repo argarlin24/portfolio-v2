@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
 import { MainHeading, SubHeading, Text } from "../elements"
-import { below } from "../utilities/breakpoints"
+import { above, below } from "../utilities/breakpoints"
 import DEV from "../images/dev.svg"
 import { PrimaryBtn } from "../elements"
 import { SectionLink } from "react-scroll-section"
@@ -15,16 +15,22 @@ const HeroWrapper = styled(Flex)`
     background-position: 50% 100%;
     background-size: 50%;
     color: ${props => props.theme.colors.black};
-    min-height: 100vh;
-    padding: 200px 0;
+    min-height: 90vh;
+    padding: 250px 0 0 0;
 
-    ${below.med`
-     min-height: 90vh;
-       padding: 40px 0;
+    ${above.large`
+     background-size: 45%;
+     padding: 200px 0 0 0;
+     min-height: 100vh;
+  `}
+
+    ${below.large`
+     min-height: 80vh;
+     padding: 140px 0 0 0;
   `}
     ${below.small`
      min-height: 80vh;
-       padding: 40px 0;
+       padding: 40px 0 0 0;
   `}
 `
 

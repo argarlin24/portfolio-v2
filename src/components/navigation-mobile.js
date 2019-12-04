@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import { SectionLink } from "react-scroll-section"
 
@@ -35,6 +34,7 @@ const MobileLink = styled.div`
     display: block;
     text-decoration: none;
     color: ${props => props.theme.colors.white};
+    cursor: pointer;
     & span {
         display: block;
         font-size: 12px;
