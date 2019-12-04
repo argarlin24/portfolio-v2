@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Fade from "react-reveal/Fade"
@@ -12,7 +11,7 @@ const StyledFlex = styled(Flex)`
     padding-top: 15vh;
 `
 
-const ProjLink = styled(Link)`
+const ProjInfo = styled(Box)`
     text-decoration: none;
     color: ${props => props.theme.colors.black};
 `
@@ -42,7 +41,7 @@ const Projects = ({ data }) => {
                                     <Box width={"66%"}>Icons</Box>
                                 </Flex>
                                 <Box>
-                                    <ProjLink to={node.fields.slug}>
+                                    <ProjInfo to={node.fields.slug}>
                                         <h3>
                                             {node.frontmatter.title.toUpperCase()}
                                         </h3>
@@ -51,7 +50,7 @@ const Projects = ({ data }) => {
                                                 __html: node.html,
                                             }}
                                         />
-                                    </ProjLink>
+                                    </ProjInfo>
                                 </Box>
                             </Card>
                         ))}
