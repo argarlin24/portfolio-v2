@@ -56,7 +56,7 @@ const Hero = () => (
             <Box marginTop={"30px"}>
                 <SectionLink section="projects">
                     {({ onClick }) => (
-                        <PrimaryBtn onClick={onClick}>PROJECTS</PrimaryBtn>
+                        <PrimaryBtn onClick={onClick}>VIEW PROJECTS</PrimaryBtn>
                     )}
                 </SectionLink>
             </Box>

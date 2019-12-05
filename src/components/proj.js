@@ -37,17 +37,16 @@ const Projects = ({ data }) => {
                     <CardWrapper>
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             <Card key={node.id} flexDirection="column">
-                                <Flex>
-                                    <Box width={"33%"}>
-                                        <Img
-                                            fluid={
-                                                node.frontmatter.image
-                                                    .childImageSharp.fluid
-                                            }
-                                        />
-                                    </Box>
-                                </Flex>
-                                <Box>
+                                <Box width={"33%"}>
+                                    <Img
+                                        fluid={
+                                            node.frontmatter.image
+                                                .childImageSharp.fluid
+                                        }
+                                    />
+                                </Box>
+
+                                <Box marginTop="30px">
                                     <ProjInfo to={node.fields.slug}>
                                         <h3>
                                             {node.frontmatter.title.toUpperCase()}
