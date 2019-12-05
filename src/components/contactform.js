@@ -53,14 +53,17 @@ function encode(data) {
 }
 
 const ContactForm = () => {
-    const [state, setState] = React.useState({})
+    const [state, setState] = React.useState({
+        email: "",
+        message: "",
+    })
 
     const handleChange = e => {
         setState({ ...state, [e.target.name]: e.target.value })
     }
 
     const handleSubmit = e => {
-        e.preventDefault()
+        // e.preventDefault()
         const form = e.target
         fetch("/", {
             method: "POST",
@@ -70,7 +73,7 @@ const ContactForm = () => {
                 ...state,
             }),
         })
-            .then(setState({}))
+            .then(alert("Thanks!"))
             .then(() => navigate(form.getAttribute("action")))
             .catch(error => alert(error))
     }
