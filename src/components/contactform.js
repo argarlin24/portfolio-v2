@@ -63,7 +63,7 @@ const ContactForm = () => {
     }
 
     const handleSubmit = e => {
-        // e.preventDefault()
+        e.preventDefault()
         const form = e.target
         fetch("/", {
             method: "POST",
@@ -73,7 +73,6 @@ const ContactForm = () => {
                 ...state,
             }),
         })
-            .then(alert("Thanks!"))
             .then(() => navigate(form.getAttribute("action")))
             .catch(error => alert(error))
     }
@@ -90,11 +89,11 @@ const ContactForm = () => {
                         netlify-honeypot="bot-field"
                         data-netlify="true"
                         onSubmit={handleSubmit}
-                        action="/"
+                        action="/success"
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                         <Hidden>
-                            <input name="form-name" value="contact" readOnly/>
+                            <input name="form-name" value="contact" readOnly />
                         </Hidden>
                         <BlockLabel>EMAIL:</BlockLabel>
 
