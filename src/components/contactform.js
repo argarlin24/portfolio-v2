@@ -94,7 +94,7 @@ const ContactForm = () => {
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                         <Hidden>
-                            <input name="form-name" value="contact" />
+                            <input name="form-name" value="contact" readOnly/>
                         </Hidden>
                         <BlockLabel>EMAIL:</BlockLabel>
 
