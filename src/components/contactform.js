@@ -70,6 +70,7 @@ const ContactForm = () => {
                 ...state,
             }),
         })
+            .then(setState({}))
             .then(() => navigate(form.getAttribute("action")))
             .catch(error => alert(error))
     }
