@@ -2,6 +2,7 @@
 title: "MovieDB"
 date: "2018-06-04"
 position: 3
+image: ../../images/movie-db.png
 ---
 
 A frontend user interface built with React and Styled components that consumes The Movie Database API.

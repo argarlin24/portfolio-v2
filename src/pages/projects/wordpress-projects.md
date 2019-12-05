@@ -2,6 +2,7 @@
 title: "WordPress Projects"
 date: "2019-06-26"
 position: 2
+image: ../../images/connor-reporting.png
 ---
 
 The following websites are WordPress websites that I have built in the past. All sites were custom themes started using the Underscores base theme.

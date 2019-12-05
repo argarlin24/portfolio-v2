@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
@@ -37,8 +38,14 @@ const Projects = ({ data }) => {
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             <Card key={node.id} flexDirection="column">
                                 <Flex>
-                                    <Box width={"33%"}>Image</Box>
-                                    <Box width={"66%"}>Icons</Box>
+                                    <Box width={"33%"}>
+                                        <Img
+                                            fluid={
+                                                node.frontmatter.image
+                                                    .childImageSharp.fluid
+                                            }
+                                        />
+                                    </Box>
                                 </Flex>
                                 <Box>
                                     <ProjInfo to={node.fields.slug}>
