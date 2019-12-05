@@ -86,6 +86,7 @@ const ContactForm = () => {
                         netlify-honeypot="bot-field"
                         data-netlify="true"
                         onSubmit={handleSubmit}
+                        action="/"
                     >
                         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                         <Hidden>
