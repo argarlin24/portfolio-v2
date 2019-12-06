@@ -11,4 +11,4 @@ This site was built using JAM (JavaScript, APIs, Markup) Stack architecture. The
 
 Check it out <a href="https://socaltides.netlify.com/" target="_blank" style="color: #3e66a4;">HERE</a>
 
-Check it out on <a href="https://socaltides.netlify.com/" target="_blank" style="color: #3e66a4;">Github</a>
+Check it out on <a href="https://github.com/argarlin24/sd-tide-table" target="_blank" style="color: #3e66a4;">Github</a>
