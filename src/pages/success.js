@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import { Flex, Box } from "reflexbox/styled-components"
 import styled from "styled-components"
 import { MainHeading } from "../elements"
+import Sent from "../images/sent.svg"
 
 export const ReturnBtn = styled(Link)`
     display: block;
@@ -17,19 +18,26 @@ export const ReturnBtn = styled(Link)`
     cursor: pointer;
     text-decoration: none;
 `
+const Banner = styled.img`
+    display: block;
+    height: auto;
+    width: 100%;
+`
 
 const SuccessPage = () => (
     <Layout>
-        <SEO title="404: Not found" />
+        <SEO title="Success, Message Sent" />
         <Flex
             height="100vh"
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            bg="#3e66a4"
         >
-            <Box width="90%" marginBottom="32px">
-                <MainHeading primary textAlign="center">
+            <Box width="50%" marginBottom="32px"> 
+            <Banner src={Sent} alt="Message Sent"/>
+            </Box>
+            <Box marginBottom="32px">
+            <MainHeading textAlign="center">
                     Thanks for getting in touch!
                 </MainHeading>
             </Box>

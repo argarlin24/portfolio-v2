@@ -3,9 +3,9 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { MainHeading } from "../elements"
 import { Flex, Box } from "reflexbox/styled-components"
 import styled from "styled-components"
+import FourOFour from "../images/404.svg"
 
 const Banner = styled.img`
     display: block;
@@ -33,12 +33,9 @@ const NotFoundPage = () => (
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            bg="#3e66a4"
         >
             <Box width={"75%"} marginBottom="32px">
-                <MainHeading primary textAlign="center">
-                    OOPS, PAGE NOT FOUND...
-                </MainHeading>
+                <Banner src={FourOFour} alt="(404) Page Not Found"/>
             </Box>
             <ReturnBtn to="/">Return Home</ReturnBtn>
             <Box />
