@@ -34,7 +34,7 @@ const NotFoundPage = () => (
             alignItems="center"
             justifyContent="center"
         >
-            <Box width={"75%"} marginBottom="32px">
+            <Box width={"50%"} marginBottom="32px">
                 <Banner src={FourOFour} alt="(404) Page Not Found"/>
             </Box>
             <ReturnBtn to="/">Return Home</ReturnBtn>

@@ -33,7 +33,7 @@ const SuccessPage = () => (
             alignItems="center"
             justifyContent="center"
         >
-            <Box width="50%" marginBottom="32px"> 
+            <Box width="40%" marginBottom="32px"> 
             <Banner src={Sent} alt="Message Sent"/>
             </Box>
             <Box marginBottom="32px">
