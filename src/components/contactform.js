@@ -101,6 +101,7 @@ const ContactForm = () => {
                         <Input
                             type="email"
                             name="email"
+                            id="email"
                             onChange={handleChange}
                         />
 
@@ -108,6 +109,7 @@ const ContactForm = () => {
 
                         <TextArea
                             name="message"
+                            id="message"
                             rows="10"
                             onChange={handleChange}
                         />
