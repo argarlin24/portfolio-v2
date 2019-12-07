@@ -96,7 +96,7 @@ const ContactForm = () => {
                         <Hidden>
                             <input name="form-name" value="contact" readOnly />
                         </Hidden>
-                        <BlockLabel>EMAIL:</BlockLabel>
+                        <BlockLabel for="email">EMAIL:</BlockLabel>
 
                         <Input
                             type="email"
@@ -104,7 +104,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                         />
 
-                        <BlockLabel>MESSAGE:</BlockLabel>
+                        <BlockLabel for="message">MESSAGE:</BlockLabel>
 
                         <TextArea
                             name="message"
