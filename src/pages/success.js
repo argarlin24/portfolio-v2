@@ -17,6 +17,9 @@ export const ReturnBtn = styled(Link)`
     color: #fafafa;
     cursor: pointer;
     text-decoration: none;
+    &:hover {
+        background: #0e7a70;
+    }
 `
 const Banner = styled.img`
     display: block;
@@ -33,11 +36,11 @@ const SuccessPage = () => (
             alignItems="center"
             justifyContent="center"
         >
-            <Box width="40%" marginBottom="32px"> 
-            <Banner src={Sent} alt="Message Sent"/>
+            <Box width="40%" marginBottom="32px">
+                <Banner src={Sent} alt="Message Sent" />
             </Box>
             <Box marginBottom="32px">
-            <MainHeading textAlign="center">
+                <MainHeading textAlign="center">
                     Thanks for getting in touch!
                 </MainHeading>
             </Box>

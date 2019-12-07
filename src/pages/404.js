@@ -23,6 +23,9 @@ export const ReturnBtn = styled(Link)`
     color: #fafafa;
     cursor: pointer;
     text-decoration: none;
+    &:hover {
+        background: #0e7a70;
+    }
 `
 
 const NotFoundPage = () => (
@@ -35,7 +38,7 @@ const NotFoundPage = () => (
             justifyContent="center"
         >
             <Box width={"50%"} marginBottom="32px">
-                <Banner src={FourOFour} alt="(404) Page Not Found"/>
+                <Banner src={FourOFour} alt="(404) Page Not Found" />
             </Box>
             <ReturnBtn to="/">Return Home</ReturnBtn>
             <Box />

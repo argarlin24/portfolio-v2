@@ -9,4 +9,7 @@ export const PrimaryBtn = styled.button`
     background-color: ${props => props.theme.colors.secondary};
     color: #fafafa;
     cursor: pointer;
+    &:hover {
+        background: #0e7a70;
+    }
 `
