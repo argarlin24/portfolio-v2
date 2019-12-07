@@ -9,6 +9,7 @@ const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.white};
     min-height: 30vh;
     padding: 120px 0 140px 0;
+    background: #f2f2f2;
 `
 const TextArea = styled.textarea`
     border-radius: 4px;

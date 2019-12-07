@@ -9,7 +9,8 @@ import { Card } from "../elements"
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.white};
     min-height: 75vh;
-    padding-top: 15vh;
+    padding-top: 120px;
+    padding-bottom: 120px;
 `
 
 const ProjInfo = styled(Box)`
