@@ -6,11 +6,15 @@ import styled from "styled-components"
 import { Flex, Box } from "reflexbox/styled-components"
 import Layout from "../components/layout"
 import { StyledLink } from "../elements"
+import { below } from "../utilities/breakpoints"
 
 const Wrapper = styled(Flex)`
     background: #f8f8f8;
     min-height: 100vh;
     padding: 150px 0;
+    ${below.large`
+      padding: 80px 0; 
+  `}
 `
 
 export default ({ data }) => {
