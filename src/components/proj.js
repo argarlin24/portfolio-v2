@@ -4,7 +4,8 @@ import Img from "gatsby-image"
 
 import Fade from "react-reveal/Fade"
 import { Flex, Box } from "reflexbox/styled-components"
-import { Card } from "../elements"
+
+import { Card, StyledLink } from "../elements"
 
 const StyledFlex = styled(Flex)`
     background: ${props => props.theme.colors.white};
@@ -48,16 +49,17 @@ const Projects = ({ data }) => {
                                 </Box>
 
                                 <Box marginTop="30px">
-                                    <ProjInfo to={node.fields.slug}>
+                                    <ProjInfo>
                                         <h3>
                                             {node.frontmatter.title.toUpperCase()}
                                         </h3>
-                                        <div
-                                            dangerouslySetInnerHTML={{
-                                                __html: node.html,
-                                            }}
-                                        />
+                                        <div>{node.excerpt}</div>
                                     </ProjInfo>
+                                </Box>
+                                <Box marginTop="30px">
+                                    <StyledLink to={`${node.fields.slug}`}>
+                                        Learn More
+                                    </StyledLink>
                                 </Box>
                             </Card>
                         ))}
