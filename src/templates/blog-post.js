@@ -10,17 +10,14 @@ import { StyledLink } from "../elements"
 const Wrapper = styled(Flex)`
     background: #f8f8f8;
     min-height: 100vh;
+    padding: 150px 0;
 `
 
 export default ({ data }) => {
     const post = data.markdownRemark
     return (
         <Layout>
-            <Wrapper
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-            >
+            <Wrapper flexDirection="column" alignItems="center">
                 <Box width={["50%", "50%", "50%", "25%"]}>
                     <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 </Box>
