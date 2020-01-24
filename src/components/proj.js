@@ -39,7 +39,7 @@ const Projects = ({ data }) => {
                     <CardWrapper>
                         {data.allMarkdownRemark.edges.map(({ node }) => (
                             <Card key={node.id} flexDirection="column">
-                                <Box width={"66%"}>
+                                <Box width={"100%"}>
                                     <Img
                                         fluid={
                                             node.frontmatter.image

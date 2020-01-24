@@ -6,5 +6,5 @@ export const Card = styled(Flex)`
     border: 1px solid #f6f6f6;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     margin: 30px 0;
-    padding: 30px 60px;
+    padding: 60px 60px;
 `
