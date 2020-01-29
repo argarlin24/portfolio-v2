@@ -30,7 +30,7 @@ export default ({ data }) => {
                     <div dangerouslySetInnerHTML={{ __html: post.html }} />
                 </Box>
                 <Box mt="30px">
-                    <StyledLink to="/">RETURN HOME</StyledLink>
+                    <StyledLink to="/">HOME</StyledLink>
                 </Box>
             </Wrapper>
         </Layout>
