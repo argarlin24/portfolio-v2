@@ -4,12 +4,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import Navigation from "../components/navigation"
-import MobileNav from "../components/navigation-mobile"
+import Navigation from "../components/nav"
+import MobileNav from "../components/mobile-nav"
 import { Section } from "react-scroll-section"
 import Hero from "../components/hero"
-import ContactForm from "../components/contactform"
-import Projects from "../components/proj"
+import ContactForm from "../components/contactForm"
+import Projects from "../components/projects"
 
 const IndexPage = ({ data }) => (
     <Layout>
