@@ -2,7 +2,7 @@
 title: "SoCal Tides"
 date: "2019-09-17"
 position: 1
-image: ../../images/socal-tides.png
+image: ../../images/tides.png
 ---
 
 SoCal Tides uses data from the NOAA CO-OPS API to display daily and monthly tide data for three Southern California regions. The motivation for this website stemmed from the lack of easy to access and free/ad-free tide information.
