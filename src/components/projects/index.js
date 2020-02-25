@@ -39,7 +39,7 @@ const Projects = ({ data }) => {
                                 </Box>
                                 <Box marginTop="30px">
                                     <StyledLink to={`${node.fields.slug}`}>
-                                        Learn More
+                                        LEARN MORE
                                     </StyledLink>
                                 </Box>
                             </Card>
